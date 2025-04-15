@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Eskişehir Technical University - University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Üniversitenin tarihçesi, yönetim yapısı ve detaylı bilgileri.">
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeY8DLa8o3sVpyCh1eI+FxkNxC+eVoSX9gnYlJfytiC0I5H+" 
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .content-wrapper {
+      display: flex;
+      min-height: 85vh;
+    }
+    nav {
+      width: 250px;
+      background-color: #fff;
+      border-right: 2px solid #ccc;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      margin-bottom: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1rem;
+    }
+    nav a.active {
+      color: #007bff;
+      font-weight: bold;
+    }
+    main {
+      flex: 1;
+      padding: 20px 40px;
+      background-color: #eef2f7;
+    }
+    main h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      background-color: #003366;
+      color: #fff;
+      padding: 10px 0;
+    }
+    #univ-text {
+      font-size: 1.1rem;
+    }
+    #toggle-btn {
+      margin-top: 10px;
+    }
+    .hover-transparent {
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+    .hover-transparent:hover {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    ESKİŞEHİR TECHNICAL UNIVERSITY
+  </header>
+  <div class="content-wrapper">
+    <nav>
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a class="active" href="university.html">UNIVERSITY</a></li>
+        <li><a href="academics.html">ACADEMICS</a></li>
+        <li><a href="students.html">STUDENTS</a></li>
+        <li><a href="campuslife.html">CAMPUS LIFE</a></li>
+        <li><a href="login.html">STUDENT LOGIN</a></li>
+        <li><a href="documents.html">DOCUMENTS</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Üniversite Hakkında</h1>
+      <p id="univ-text">
+        Üniversitemiz, çağdaş eğitim anlayışı ve geniş kampüs olanakları ile öğrencilerine en üst düzeyde hizmet sunar.
+        <span id="more-text" style="display: none;">
+          Detaylı bilgi: Üniversitemizde modern eğitim teknolojileri, uluslararası iş birlikleri ve çeşitli sosyal etkinlikler yer almaktadır. 
+          Öğrenci sayısının ve kadro istatistiklerinin yanı sıra, farklı fakülteler ve enstitülerde sunulan programlarla eğitimde fark yaratmayı hedeflemekteyiz.
+        </span>
+      </p>
+      <button id="toggle-btn" class="btn btn-primary">Show More</button>
+      
+      <div class="mt-5">
+        <h2>Üniversite Fotoğrafı</h2>
+        <img 
+          src="../images/university.jpg" 
+          alt="Üniversite Fotoğrafı" 
+          class="img-fluid hover-transparent" 
+          style="max-width: 400px;"
+        >
+      </div>
+    </main>
+  </div>
+  <footer>
+    &copy; 2025 Eskişehir Technical University. Tüm hakları saklıdır.
+  </footer>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+G1cFKnJin6xS19i9OWLDhc0w2Wl6" 
+    crossorigin="anonymous">
+  </script>
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const moreText = document.getElementById('more-text');
+    toggleBtn.addEventListener('click', function() {
+      if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        toggleBtn.textContent = "Show Less";
+      } else {
+        moreText.style.display = "none";
+        toggleBtn.textContent = "Show More";
+      }
+    });
+  </script>
+</body>
+</html>
